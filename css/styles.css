@@ -108,9 +108,10 @@ img {
     margin-right: 0px;
 }
 .navigation-link,
-.header-contact {
-    display: block;
-    
+.header-mail,
+.header-tel {
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
 }
@@ -132,13 +133,31 @@ img {
 .link:focus {
     color: var(--hover-blue);
 }
+.mail-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
 /**
   |============================
   | Hero section
   |============================
 */
 /* Герой */
+
 .hero {
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)), url(/images/hero/img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
     background-color: var(--hero-background);
     padding-top: 200px;
     padding-bottom: 200px;
@@ -192,10 +211,20 @@ img {
     margin-left: -30px;
     margin-top: -30px;
 }
-.features-list > .item {
+
+.features-list>.item {
     flex-basis: calc(100% / 4 - 30px);
     margin-left: 30px;
     margin-top: 30px;
+}
+.icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    height: 120px;
+    margin-bottom: 30px;
 }
 .features-title {
     font-weight: 700;
@@ -206,6 +235,7 @@ img {
 
     margin-bottom: 10px;
 }
+
 .features-text {
     font-size: 14px;
     line-height: 1.71;
@@ -295,6 +325,83 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--light-grey);
+    padding-bottom: 16px;
+}
+.sociallinks {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.sociallinks > .item {
+    flex-basis: calc((100% - 10 * 4) / 4);
+    
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 44px;
+    height: 44px;
+    
+    border-radius: 50%;
+    
+}
+.social-link:hover,
+.social-link:focus {
+    background-color: #2196F3;
+}
+.social-icon {
+    fill: #AFB1B8;
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+    fill: #FFFFFF;
+}
+/**
+  |============================
+  | Clients section
+  |============================
+*/
+.clients-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 50px;
+}
+.clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.clients-list > item {
+    flex-basis: calc(100% / 6);
+}
+.client-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 170px;
+    height: 92px;
+    
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.client-link:hover,
+.client-link:focus {
+    border-color: #2196F3;
+}
+.client-icon {
+    fill: #AFB1B8;
+}
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+    fill: #2196F3;
 }
 /**
   |============================
@@ -353,6 +460,13 @@ img {
     margin-left: 30px;
     margin-top: 30px;
 }
+.portfolio-link {
+    display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-content {
     padding: 20px 24px;
     border-right: 1px solid var(--portfolio-content-border);
@@ -385,6 +499,14 @@ img {
     padding-top: 60px;
     padding-bottom: 60px;
 }
+.footer-conteiner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.logo-group {
+    margin-right: 70px;
+}
 .footer-logo {
     display: block;
     margin-right: 0px;
@@ -405,6 +527,21 @@ img {
 .mail, 
 .tel {
     color: var(--footer-contakts);
+}
+.sociallinks-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+.footer-link {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-icon {
+    fill: #FFFFFF;
 }
 
 
