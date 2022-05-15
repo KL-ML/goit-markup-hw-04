@@ -9,6 +9,7 @@
     --footer-contakts: rgba(255, 255, 255, 0.6);
     --header-line: #ECECEC;
     --portfolio-content-border: #EEEEEE;
+    --border-grey: #AFB1B8;
 }
 body {
     font-family: 'Roboto', sans-serif;
@@ -221,7 +222,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F5F4FA;
+    background-color:  var(--team-background);
     border-radius: 4px;
     height: 120px;
     margin-bottom: 30px;
@@ -350,14 +351,14 @@ img {
 }
 .social-link:hover,
 .social-link:focus {
-    background-color: #2196F3;
+    background-color: var(--hover-blue);
 }
 .social-icon {
-    fill: #AFB1B8;
+    fill: var(--border-grey);
 }
 .social-link:hover .social-icon,
 .social-link:focus .social-icon {
-    fill: #FFFFFF;
+    fill: var(--hero-h1-white);
 }
 /**
   |============================
@@ -389,19 +390,19 @@ img {
     width: 170px;
     height: 92px;
     
-    border: 1px solid #AFB1B8;
+    border: 1px solid var(--border-grey);
     border-radius: 4px;
 }
 .client-link:hover,
 .client-link:focus {
-    border-color: #2196F3;
+    border-color: var(--hover-blue);
 }
 .client-icon {
-    fill: #AFB1B8;
+    fill: var(--border-grey);
 }
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
-    fill: #2196F3;
+    fill: var(--hover-blue);
 }
 /**
   |============================
@@ -541,7 +542,7 @@ img {
     background-color: rgba(255, 255, 255, 0.1);
 }
 .footer-icon {
-    fill: #FFFFFF;
+    fill: var(--hero-h1-white);
 }
 
 
