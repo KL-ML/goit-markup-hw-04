@@ -20,6 +20,7 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+/* #region обнулення стилів */
 h1,
 h2,
 h3,
@@ -60,9 +61,9 @@ a {
     text-decoration: none;
     color: inherit;
 }
+/* #endregion */
 
-
-/*** common styles ***/
+/* #region common styles */
 
 /* container */
 .container {
@@ -72,11 +73,10 @@ a {
     padding: 0 15px;
 }
 
-/* section */
+/* section */ 
 .section {
     padding: 120px 0;
 }
-
 /* section header h2 */
 .section-title {
     font-weight: 700;
@@ -88,7 +88,6 @@ a {
     letter-spacing: 0.02em;
     margin-bottom: 72px;
 }
-
 /* flexbox for section */
 .section-list-flex {
     display: flex;
@@ -96,7 +95,15 @@ a {
     gap: 24px;
 }
 
-/* card anotation wrap */
+/* card */
+.card-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--brand-color-dark);
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
 .card-text-wrap {
     padding: 32px 0;
 }
@@ -106,17 +113,9 @@ a {
 .card-width-if-three {
     width: calc((100% - 2 * 24px) / 3);
 }
-/* card header h3 */
-.card-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    color: var(--brand-color-dark);
-    letter-spacing: 0.02em;
-    margin-bottom: 8px;
-}
+/* #endregion */
 
-/* logo */
+/* #region logo */
 .logo {
     font-family: var(--logo-font-family);
     font-weight: 700;
@@ -130,26 +129,22 @@ a {
 .logo:focus {
     color: var(--pressed-state-color);
 }
-.logo-dark {
+.logo-dark-accent {
     color: var(--brand-color-dark);
 }
 .logo-light {
     color: var(--brand-color-grey);
 }
+/* #endregion */
 
-
-/*** header ***/
+/* #region Header */
 .header {
     border-bottom: 1px solid var(--line-color);
 }
-.header .container {
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.header .logo {
-    padding: 24px 0;
-    margin-right: 76px;
 }
 
 /* navigation */
@@ -157,13 +152,17 @@ a {
     display: flex;
     align-items: center;
 }
+.nav-logo {
+    padding: 24px 0;
+    margin-right: 76px;
+}
 .nav-list {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 .nav-link {
-    display: block;
+    /* display: block; */
     color: var(--brand-color-dark);
     font-weight: 500;
     padding: 24px 0;
@@ -183,7 +182,7 @@ a {
     gap: 40px;
 }
 .contact-link {
-    display: block;
+    /* display: block; */
     color: inherit;
     padding: 24px 0;
 }
@@ -191,9 +190,9 @@ a {
 .contact-link:focus {
     color: var(--pressed-state-color);
 }
+/* #endregion */
 
-
-/*** hero section ***/
+/* #region hero */
 .hero {
     background-color: var(--brand-color-dark);
     padding: 188px 0;
@@ -228,37 +227,38 @@ a {
 .hero-btn:focus {
     background-color: var(--pressed-state-color);
 }
+/* #endregion */
 
+/* #region features */
+/* #endregion */
 
-/*** features section ***/
-
-
-/*** team section ***/
-.team-section {
+/* #region team */
+.team {
     background-color: var(--brand-color-grey);
 }
 .team-card {
     background-color: var(--brand-color-white);
     border-radius: 0px 0px 4px 4px;
 }
-.team-card .card-text-wrap {
+.team-text-wrap {
     text-align: center;
 }
+/* #endregion */
 
-
-/*** portfolio section ***/
-.portfolio-section .section-list-flex {
+/* #region portfolio*/
+.portfolio-list {
     flex-wrap: wrap;
     row-gap: 48px;
 }
-.portfolio-section .card-text-wrap {
+.portfolio-text-wrap {
     border-bottom: 1px solid var(--line-color);
     border-left: 1px solid var(--line-color);
     border-right: 1px solid var(--line-color);
     padding: 32px 16px;
 }
+/* #endregion */
 
-/*** footer ***/
+/* #region footer */
 .footer {
     background-color: var(--brand-color-dark);
     padding-top: 100px;
@@ -272,3 +272,4 @@ a {
     max-width: 264px;
     color: var(--brand-color-grey)
 }
+/* #endregion */
