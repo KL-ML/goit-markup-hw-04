@@ -220,10 +220,8 @@ a {
     align-items: center;
     gap: 40px;
 }
-.nav-item {
-    position: relative;
-}
 .nav-link {
+    position: relative;
     display: inline-block;
     color: var(--brand-color-dark);
     font-weight: 500;
