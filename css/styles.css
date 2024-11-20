@@ -110,7 +110,7 @@ a {
     margin-bottom: 8px;
 }
 .card-text-wrap {
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 .card-width-if-four {
     width: calc((100% - 3 * 24px) / 4);
@@ -162,19 +162,26 @@ a {
 
 /* --------------- */
 /* #region socials */
-.socials-item {
-    display: flex;
-    align-items: center;
+.socials-list {
     justify-content: center;
-    border-radius: 50%;
-    background-color: var(--brand-color-accent);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 12px;
+}
+.socials-item {
     width: 40px;
     height: 40px;
 }
-.socials-item:hover,
-.socials-item:focus {
+.socials-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--brand-color-accent);
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.socials-link:hover,
+.socials-link:focus {
     background-color: var(--pressed-state-color);
     cursor: pointer;
 }
@@ -187,13 +194,18 @@ a {
 /* #region Header */
 .header {
     border-bottom: 1px solid var(--line-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px rgba(46, 47, 66, 0.16), 
+                0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+.header-nav-item {
+    position: relative;
+}
 /* navigation */
 .nav {
     display: flex;
@@ -212,6 +224,7 @@ a {
     position: relative;
 }
 .nav-link {
+    display: inline-block;
     color: var(--brand-color-dark);
     font-weight: 500;
     padding: 24px 0;
@@ -224,16 +237,14 @@ a {
 .nav-link-active {
     color: var(--pressed-state-color);
 }
-
 .nav-link-active::after {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
     content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
     width: 100%;
     height: 4px;
     border-radius: 2px;
-
     background-color: var(--pressed-state-color);
 }
 /* contacts */
@@ -259,6 +270,7 @@ a {
 /* ------------ */
 /* #region hero */
 .hero {
+    max-width: 1440px;
     background-image: 
     linear-gradient(
         rgba(46, 47, 66, 0.7), 
@@ -269,6 +281,7 @@ a {
     background-position: center;
     background-size: cover;
     padding: 188px 0;
+    margin: 0 auto;
 }
 
 .hero-title {
@@ -306,6 +319,10 @@ a {
 /* ---------------- */
 /* #region features */
 .features-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
     background-color: var(--brand-color-grey);
@@ -328,17 +345,9 @@ a {
 .team-card {
     background-color: var(--brand-color-white);
     border-radius: 0px 0px 4px 4px;
-    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
-        0 1px 1px 0 rgba(46, 47, 66, 0.08),
-        0 2px 1px 0 rgba(46, 47, 66, 0.08);
-}
-.team-card:hover,
-.team-card:focus {
-    cursor: pointer;
-}
-.team-card:hover .socials-item,
-.team-card:focus .socials-item {
-    background-color: var(--pressed-state-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-text-wrap {
     text-align: center;
@@ -360,9 +369,9 @@ a {
 .portfolio-card:hover,
 .portfolio-card:focus {
     cursor: pointer;
-    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
-            0 1px 1px 0 rgba(46, 47, 66, 0.08),
-            0 2px 1px 0 rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-card:hover .overlay,
 .portfolio-card:focus .overlay {
@@ -398,23 +407,19 @@ a {
     max-width: 264px;
     color: var(--brand-color-grey)
 }
-.footer-header {
-    font-size: 16px;
+.footer-socials-title {
     font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
     color: var(--brand-color-white);
     margin-bottom: 16px;
+}
+.footer-socials-list {
+    gap: 16px;
 }
 .footer-socials-item {
     padding: 8px;
 }
-.footer-socials-icon {
-    width: 24px;
-    height: 24px;
-}
-.footer-socials-item:hover,
-.footer-socials-item:focus {
+.footer-socials-link:hover,
+.footer-socials-link:focus {
     background-color: var(--pressed-state-footer-color);
 }
 /* #endregion */
